@@ -1,0 +1,10 @@
+﻿@model MobilityTechTest.Models.CurrentWeatherModel
+@{
+    ViewData["Title"] = "Forecast";
+}
+
+@Html.React("Forecast", new
+{
+    data = Model,
+    url = Url.Action("Index")
+})

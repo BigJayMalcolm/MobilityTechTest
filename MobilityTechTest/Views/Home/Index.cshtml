@@ -1,0 +1,20 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-8">
+        @Html.React("Search", new
+        {
+            url = Url.Action("Forecast")
+        })
+    </div>
+    <div class="col-4">
+        @Html.React("SearchList", new
+        {
+            data = Model,
+            url = Url.Action("Forecast")
+        })
+    </div>
+</div>
